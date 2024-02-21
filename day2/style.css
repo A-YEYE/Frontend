@@ -1,0 +1,112 @@
+#headerDiv {
+    background-color: pink;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items:center; 
+}
+
+#header {
+    text-align: center;
+    color: blue;
+}
+
+.menuDiv {
+    align-items:center; 
+    margin: 0 auto; /* container 영역을 브라우저에서 가운데 정렬하기 위해 auto설정 */
+    text-align: center; /* inline-block화 된 div들을 텍스트 마냥 center로 정렬*/
+}
+
+.menuDiv div {
+    display: inline-block; /* 가로로 나열하기 위해 block레벨 요소를 inline-block레벨로 전환 */
+    width: 200px; /* 영역 크기 지정 안해주면 inline 레벨처럼 내용물 만큼만 차지하기 때문에 크기 지정 */
+    height: 50px; /* 영역 크기 지정 안해주면 inline 레벨처럼 내용물 만큼만 차지하기 때문에 크기 지정 */
+    border: 2px solid aqua;
+    background: orange;
+    line-height: 50px; /* 세로 가운데 정렬 : line-height와 height값을 동일하게 처리합니다.*/
+
+}
+.menuDiv button {
+    display: inline-block; /* 가로로 나열하기 위해 block레벨 요소를 inline-block레벨로 전환 */
+    width: 200px; /* 영역 크기 지정 안해주면 inline 레벨처럼 내용물 만큼만 차지하기 때문에 크기 지정 */
+    height: 50px; /* 영역 크기 지정 안해주면 inline 레벨처럼 내용물 만큼만 차지하기 때문에 크기 지정 */
+    border: 2px solid skyblue;
+    background: white;
+    line-height: 50px; /* 세로 가운데 정렬 : line-height와 height값을 동일하게 처리합니다.*/
+
+}
+
+.button {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: skyblue;
+  /* text-shadow: 1px 1px 1px #000; 
+    border-radius: 10px; */
+    background-color: white;
+    background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0)
+    );
+    box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .button:hover {
+    background-color: skyblue;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .button:active {
+    box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
+
+  .imageDiv {
+  
+    margin: 0 auto; /* container 영역을 브라우저에서 가운데 정렬하기 위해 auto설정 */
+    /*text-align: center;  inline-block화 된 div들을 텍스트 마냥 center로 정렬*/
+    width: 70%;
+  }
+
+  .imageDiv img{
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+
+.imageDiv div div{
+    width: 300px;
+    height: 250px;
+    float: left;
+}
+
+hr {
+    border-color: skyblue;
+    
+}
+
+.inputLeft{
+    border: none; 
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    width: 200px;
+    white-space:pre-line;
+}
+
+.inputLight {
+    border: none; 
+    text-align: right;
+    font-size: 18px;
+    font-weight: 400;
+    color: skyblue;
+    width: 80px;
+}
