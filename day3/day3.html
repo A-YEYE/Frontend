@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="./day3Style.css">
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>가위바위보</title>
+  </head>
+  <body>
+    <input type="hidden" id="total" value="10">
+    <input type="hidden" id="pWinValue" value="0">
+    <input type="hidden" id="cWinValue" value="0">
+    <div class="colDiv">
+        <div class="topDiv">가위 바위 보</div>
+        <div class="rowDiv"> 
+            <div class="rivalDiv">플레이어</div>
+            <div class="rivalDiv">컴퓨터</div>
+        </div>
+        <div class="rowDiv"> 
+            <div class="rivalDiv" id="player">&nbsp;</div>
+            <div class="rivalDiv" id="computer">&nbsp;</div>
+        </div>
+        <div class="rowDiv"> 
+            <div class="rivalDiv" id="pWin">0</div>
+            <div class="rivalDiv" id="cWin">0</div>            
+        </div>
+        <div class="choiceDiv">
+            선택하기
+        </div>
+        <div class="reminDiv" id="totalCnt">            
+            남은 횟수 : 10
+        </div>
+        <div class="buttonDiv">
+            <button type="button" class="btnStyle" id="scissors">가위</button>
+            <button type="button" class="btnStyle" id="rock">바위</button>
+            <button type="button" class="btnStyle" id="paper">보</button>
+        </div>
+        <div class="reset">
+            <button type="button" class="resetStyle" id="resetBtn">다시 시작하기</button>
+        </div>
+        <div class="reminDiv" id="result">
+            &nbsp;
+        </div>
+    </div>
+
+    <script src="./day3js.js"></script>
+  </body>
+</html>
