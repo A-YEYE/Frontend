@@ -1,0 +1,72 @@
+.mainDiv{
+    display: flex;
+    justify-content: center; /* div를 화면 정 가운데로 위치*/
+    align-items: center; /* div를 화면 가운데로 위치 (justify-content없으면 화면 상단에 위치)*/
+    height: 100vh;
+    background-color: lightGray;
+    flex-direction: column; /* div 정렬방식*/
+}
+
+.colDiv{
+    display: flex;
+    flex-direction: row; /* div 정렬방식*/
+}
+
+.inputBorder{
+    border-width: 0;
+    background-color: transparent;
+    
+    font-size: large;
+}
+
+.qInput{
+    height: 50px;
+    width: 900px;
+    text-align: left;
+    margin-left: 55px;
+}
+
+.answerInput {
+    height: 50px;
+    width: 400px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.answerDiv {
+    margin: 0 50px;
+    height: 50px;
+    width: 400px;
+    background-color: yellow;
+    border-radius: 1rem;
+    font-size: 20px;
+}
+
+.qDiv {
+    margin: 0 50px;
+    height: 150px;
+    width: 1000px;
+    border-radius: 1rem;
+    background-color: beige;
+}
+
+.resultDiv {
+    height: 80px;
+    width: 500px;
+    display: none;
+    background-color: yellow;
+    border-radius: 1rem;
+    text-align: center;    
+    
+}
+
+.resultInput {
+    height: 80px;
+    width: 500px;    
+    cursor: pointer;    
+}
+
+.parentDiv{
+    padding-top: 20px;
+    margin-left: 25%;
+}
