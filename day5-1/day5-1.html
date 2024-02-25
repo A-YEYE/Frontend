@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="./day5-1.css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      책 리스트
+    </title>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <div><h1>책</h1></div>
+      <div id="result"></div>
+      <div class="labelDiv"><span>책 이름</span></div>
+      <div class="inputDiv"><input type="text" id="name" placeholder="책 이름을 입력하세요"></div>
+      <div class="labelDiv"><span>책 저자</span></div>
+      <div class="inputDiv"><input type="text" id="authors" placeholder="책 저자를 입력하세요"></div>
+      <div class="btnDiv"><button class="submitBtn" onclick="addBook()">제출</button></div>
+      <div class="tableDiv">
+        <table>
+            <thead id="hz">
+                <tr>
+                    <th>책 이름</th>
+                    <th>책 저자</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./day5-1.js"></script>
+  </body>
+</html>

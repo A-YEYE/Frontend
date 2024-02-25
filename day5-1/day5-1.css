@@ -1,0 +1,77 @@
+.mainDiv{
+    width: 95%;
+    margin-left: 30px;
+}
+
+.labelDiv{
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+input[type=text]{
+    -webkit-border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+}
+
+.inputDiv{
+    width: 100%;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.btnDiv{
+    padding-top: 15px;
+}
+
+.submitBtn{
+    -webkit-border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    background-color: lightblue;
+}
+
+.tableDiv{
+    padding-top: 30px;
+}
+
+table{
+    width: 100%;
+    
+}
+
+table th{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+
+td button{
+    margin: 0;
+    padding: 0.5rem 1rem;
+  
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+  
+    display: inline-block;
+    width: auto;
+  
+    border: none;
+    border-radius: 4px;
+}
+
+#resultDiv{
+    background-color: blue;
+    color: aliceblue;
+    height: 40px;
+    font-size: 25px;
+}
