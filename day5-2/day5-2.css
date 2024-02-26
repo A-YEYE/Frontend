@@ -1,0 +1,46 @@
+.mainDiv{
+    width: 100%;
+}
+
+.headerDiv{
+    font-size: 20px;
+    color: white;    
+    background-color: dodgerblue;
+    padding : 15px 0;
+}
+
+.headerDiv span{
+    margin-left: 30px;
+}
+
+.searchDiv{
+    margin-top: 20px;
+    width: 97%;
+    height: 130px;
+    margin-left: 30px;
+    background-color: lightskyblue;
+}
+
+.searchDiv span{
+    margin-left: 30px;
+}
+
+.searchOneDiv {
+    font-size: 35px;
+}
+
+.searchTwoDiv{
+    font-size: 20px;
+}
+
+input{
+    margin-left: 30px;
+    width: 500px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+}
