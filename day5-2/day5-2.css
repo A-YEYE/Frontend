@@ -39,8 +39,98 @@ input{
     height: 32px;
     font-size: 15px;
     border: 0;
-    border-radius: 2px;
-    outline: none;
+    border-radius: 5px;
     padding-left: 10px;
-    background-color: rgb(233, 233, 233);
+    background-color: white;
 }
+
+.resultDiv{
+    margin-top: 20px;
+    background-color: green;
+    width: 97%;
+    height: 300px;
+    margin-left: 30px;
+    display: none;
+}
+
+.leftDiv{
+    width: 30%;
+    height: 100%;
+    background-color: aquamarine;
+    float: left;
+}
+
+.rightDiv{
+    height: 100%;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftTopDiv{
+    width: 100%;
+    margin: 10px 10px;
+}
+
+#imageId{
+    width: 100%;
+    height: 200px;
+}
+
+.leftBottomDiv{
+    height: 40px;
+    width: 80%;
+    text-align: center;
+    font-size: 22px;
+    background-color: dodgerblue;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    margin: 30px 30px;
+}
+
+#imageId{
+    width: 75%;
+} 
+
+.rtdDiv{
+    width: auto;
+    height: 20px;
+    font-size: 15px;
+    float: left;
+    background-color: yellowgreen;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+#first{
+    background-color: dodgerblue;
+}
+
+#second{
+    background-color: lightgray;
+}
+
+#third{
+    background-color: lightgreen;
+}
+
+#forth{
+    background-color: teal;
+}
+
+.rightBottomDiv{
+    width: 100%;
+    margin: 10px 10px;
+}
+
+td {
+    border: 1px solid #aaa;
+    background-clip: padding-box;
+    scroll-snap-align: start;
+    width: 1200px;
+    height: auto;
+    font-size: 32px;
+  }

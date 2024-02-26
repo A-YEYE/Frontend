@@ -13,11 +13,32 @@
         <div class="searchDiv">
             <div class="searchOneDiv"><span>Search GitHub Users</span></div>
             <div class="searchTwoDiv"><span>Enter a username to fetch a user profile and repos</span></div>
-            <div><input type="text"></div>
+            <div><input type="text" id="gitName" onkeyup="demoGithubUser()" maxlength='20' placeholder="GitHub Username..."></div>
         </div>
-        <div class="resultDiv">
-
+        <div class="resultDiv" id="resultDiv">
+          <div class="leftDiv">
+            <div class="leftTopDiv"><input type="image" id="imageId" src=""></div>
+            <div class="leftBottomDiv">view Profile</div>
+          </div>
+          <div class="rightDiv">
+            <div class="rightTopDiv">
+              <div class="rtdDiv" id="first">Public Repos: </div>
+              <div class="rtdDiv" id="second">Public Gists: </div>
+              <div class="rtdDiv" id="third">Followers: </div>
+              <div class="rtdDiv" id="forth">Following: </div>
+            </div>
+            <div class="rightBottomDiv">
+              <table>
+                <tr><td>1</td></tr>
+                <tr><td>2</td></tr>
+                <tr><td>3</td></tr>
+                <tr><td>4</td></tr>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
+
+      <script src="./day5-2.js"></script>
   </body>
 </html>
