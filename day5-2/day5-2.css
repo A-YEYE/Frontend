@@ -46,23 +46,44 @@ input{
 
 .resultDiv{
     margin-top: 20px;
-    background-color: green;
     width: 97%;
     height: 300px;
     margin-left: 30px;
+    display: none;
+    border-width: 1px;
+    border-color: lightgrey;
+}
+
+#div403{
+    margin-top: 20px;
+    background-color: red;
+    width: 97%;
+    height: 300px;
+    margin-left: 30px;
+    font-size: 50px;
+    text-align: center;
+    display: none;
+}
+
+#div404{
+    margin-top: 20px;
+    background-color: red;
+    width: 97%;
+    height: 300px;
+    margin-left: 30px;
+    font-size: 50px;
+    text-align: center;
     display: none;
 }
 
 .leftDiv{
     width: 30%;
-    height: 100%;
-    background-color: aquamarine;
+    height: 100%;  
     float: left;
 }
 
 .rightDiv{
     height: 100%;
-    background-color: rebeccapurple;
     display: flex;
     flex-direction: column;
 }
@@ -126,7 +147,7 @@ input{
     margin: 10px 10px;
 }
 
-td {
+th, td {
     border: 1px solid #aaa;
     background-clip: padding-box;
     scroll-snap-align: start;

@@ -12,64 +12,70 @@ class HttpError extends Error {
       return response.json();
     } 
     else if(response.status == 403){
-      //  console.log("403");
-        return 0;
+        return 403;
     }
+    else if(response.status == 404){
+      return 404;
+  }
     else {
       throw new HttpError(response);      
     }
   }
   
-  // 유효한 사용자를 찾을 때까지 반복해서 username을 물어봄
   async function demoGithubUser() {
-  
+    let url = "https://api.github.com/users/"
     let user;
-    let followers;
-    let following;
     let repos;
- //   while(true) {
-      let name = document.getElementById("gitName").value;
-   //  let name = prompt("GitHub username을 입력하세요.", "iliakan");
-   //console.log(name);
-  
-      try {
-        user = await loadJson(`https://api.github.com/search/users?q=${name}`);
-        
-        if(user != 0){
-          console.log(user.items[0]);
-            document.getElementById("resultDiv").style.display = "block";
-            document.getElementById("imageId").src = user.items[0].avatar_url;
-            let login = user.items[0].login;
-        
-            repos = await loadJson(`https://api.github.com/users/${login}/repos`);     
-            
-            followers = await loadJson(`https://api.github.com/users/${login}/followers`) == 0 ? 0 : await loadJson(`https://api.github.com/users/${login}/followers`);
-            following = await loadJson(`https://api.github.com/users/${login}/following`) == 0 ? 0 : await loadJson(`https://api.github.com/users/${login}/following`);
-            
-            if(followers != 0) {
-                document.getElementById("third").innerHTML = "Followers: " + followers.length;
-            } 
-            if(following != 0 ) {
-                document.getElementById("forth").innerHTML = "Following: " + following.length;
-            }
-            if(repos != 0){
-              console.log("repos :: " + repos);
-          //    console.log("repos.items[0].homepage :: " + repos.items[0].homepage);
-           //   document.getElementById("firTd").innerHTML = "Blog: " + repos.items[0].homepage;
-            }
-        }
- //       break; // 에러가 없으므로 반복문을 빠져나옵니다.
-      } catch(err) {
-        if (err instanceof HttpError && err.response.status == 404) {
-            document.getElementById("resultDiv").style.display = "none";
-        } else {
-          // 알 수 없는 에러는 다시 던져집니다.
-          throw err;
+    
+    let name = document.getElementById("gitName").value;
+
+    try {
+      user = await loadJson(url + name);
+      
+      if(user != 403){
+        document.getElementById("resultDiv").style.display = "block";
+        document.getElementById("imageId").src = user.avatar_url;
+        document.getElementById("first").innerHTML = "Public Repos: " + user.public_repos;
+        document.getElementById("second").innerHTML = "Public Gists: " + user.public_gists;
+        document.getElementById("third").innerHTML = "Followers: " + user.followers;
+        document.getElementById("forth").innerHTML = "Following: " + user.following;
+
+        let login = user.login; 
+    
+        repos = await loadJson(url + login + "/repos");     
+        console.log(repos);
+        if(repos != 403 && repos != 404 && repos.length > 0){
+          document.getElementById("fTd").innerHTML = repos[repos.length-3].name;   
+          document.getElementById("sTd").innerHTML = repos[repos.length-2].name;
+          document.getElementById("tTd").innerHTML = repos[repos.length-1].name;
         }
       }
- //   }
-  
-  
- //   alert(`이름: ${user.name}.`);
+
+      if(user == 404 || repos == 404){
+        document.getElementById("resultDiv").style.display = "none";
+        document.getElementById("div403").style.display = "none";
+        document.getElementById("div404").style.display = "block";
+      }
+      else if(user == 403 || repos == 403){
+        document.getElementById("resultDiv").style.display = "none";
+        document.getElementById("div404").style.display = "none";
+        document.getElementById("div403").style.display = "block";
+      }
+      else{        
+        document.getElementById("div404").style.display = "none";
+        document.getElementById("div403").style.display = "none";
+      }
+
+    } catch(err) {
+      if (err instanceof HttpError) {
+        document.getElementById("resultDiv").style.display = "none";
+        document.getElementById("div403").style.display = "none";
+        document.getElementById("div404").style.display = "none";
+      } else {
+        // 알 수 없는 에러는 다시 던져집니다.
+        throw err;
+      }
+    }  
+ 
     return user;
   }
