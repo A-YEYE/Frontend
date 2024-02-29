@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="./day6.css">
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      비밀번호 생성하기
+    </title>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <div class="subDiv">
+        <div class="subjectDiv marginSt">비밀번호 생성하기!</div>
+        <div class="resultDiv marginSt"><div class="copyDiv"></div></div>
+        <div><hr></div>
+        <div class="lengthDiv marginSt">
+            <div class="lengthSubDiv">
+                <label for='length' id="lengthLabel">Length</label>
+                <input type='text'  id="lengthInput" autofocus></input>
+            </div>
+        </div>
+        <div class="includeDiv marginSt">포함할 문자:</div>
+     
+            <div class="marginSt">
+                <input type="checkbox" id="number" name="number" class="chk"/>
+                <label for="number">Numbers(0-9)</label>
+            </div>
+            <div class="marginSt">
+                <input type="checkbox" id="small" name="small" class="chk"/>
+                <label for="small">Small Letters (a-z)</label>
+            </div>
+            <div class="marginSt">
+                <input type="checkbox" id="capital" name="capital" class="chk"/>
+                <label for="capital">Capital Letters (A-Z)</label>
+            </div>
+            <div class="marginSt">
+                <input type="checkbox" id="symbols" name="symbols" class="chk"/>
+                <label for="symbols">Symbols (@,!,$,&,%)</label>
+            </div>
+     
+        <div class="marginSt">
+            <div class="buttonDiv">
+                <button type="button" id="createBtn">
+                    생성하기
+                </button>
+            </div>
+        </div>
+        <div class="marginSt infoDiv">
+            <ul>
+                <li>
+                    최소 길이는 5입니다.
+                </li>
+                <li>
+                    최대 길이는 70입니다. 
+                </li>
+                <li>
+                    강력한 비밀번호는 10~16자여야 합니다.
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./day6_2.js"></script>
+  </body>
+</html>
