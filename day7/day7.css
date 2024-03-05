@@ -1,0 +1,71 @@
+.mainDiv {
+    display: flex;
+    justify-content: center; /* div를 화면 정 가운데로 위치*/
+    align-items: center; /* div를 화면 가운데로 위치 (justify-content없으면 화면 상단에 위치)*/
+    height: 100vh;
+    flex-direction: column; /* div 정렬방식*/
+    background-color: skyblue;
+}
+
+.subDiv{
+    width: 50%;
+    padding: 20px 20px;
+    
+}
+
+
+.colDiv{
+    display: flex;
+    flex-direction: row; /* div 정렬방식*/    
+}
+
+.pinkDiv{
+    background-color: lightcoral;
+}
+
+.firstDiv{
+    height: auto;
+    font-size: 60px;
+    text-align: center;
+}
+
+.resultDiv{
+    padding: 20px 20px;
+    margin: auto;
+    width: 10%;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.firstSpan{
+    font-size: 13px;
+}
+
+.secSapn{
+    font-size: 30px;
+}
+
+.thirdDiv{
+    height: 50px;
+    font-size: 40px;
+}
+
+.forDiv{
+    height: 50px;
+    font-size: 40px;
+}
+
+input{
+    background-color: transparent;
+    height: 50px;
+    width: 100%;
+    font-size: 50px;
+    border-color: transparent;
+    border-width: 0;
+    outline: none;
+    border: none;
+}
+
+.displayDiv{
+    display: none;
+}
